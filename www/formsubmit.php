@@ -7,19 +7,24 @@ $dailyNo = $_POST['dailyNo'];
 $trailerNo2 = $_POST['trailerNo2'];
 $location = $_POST['location'];
 //SECOND SECTION
-$general_condition = $_POST['general_condition'];
+$general_con = $_POST['general_condition'];
+$general_condition = implode(', ', $general_con);
 $general_condition_other = $_POST['general_condition_other'];
 //THIRD SECTION
-$engine_compartment = $_POST['engine_compartment'];
+$engine_com = $_POST['engine_compartment'];
+$engine_compartment = implode(', ', $engine_com);
 $engine_compartment_other = $_POST['engine_compartment_other'];
 //FOURTH SECTION
-$in_cab = $_POST['in_cab'];
+$cab = $_POST['in_cab'];
+$in_cab = implode(', ', $cab);
 $in_cab_other = $_POST['in_cab_other'];
 //FIFTH SECTION
-$exterior = $_POST['exterior'];
+$ext = $_POST['exterior'];
+$exterior = implode(', ', $ext);
 $exterior_other = $_POST['exterior_other'];
 //SIXTH SECTION
-$towed_units = $_POST['towed_units'];
+$towed = $_POST['towed_units'];
+$towed_units = implode(', ', $towed);
 $towed_units_other = $_POST['towed_units_other'];
 //SEVENTH SECTION
 $remarks = $_POST['remarks'];
@@ -31,7 +36,8 @@ $reviewing_driver_name = $_POST['reviewing_driver_name'];
 $reviewing_driver_employee_number = $_POST['reviewing_driver_employee_number'];
 $reviewing_driver_date = $_POST['reviewing_driver_date'];
 //tested up to here
-$maintenanc= $_POST['maintenance'];
+$main = $_POST['maintenance'];
+$maintenance = implode(', ', $main);
 
 $maintenance_ros = $_POST['maintenance_ros'];
 $maintenance_certified_by = $_POST['maintenance_certified_by'];
