@@ -80,7 +80,38 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
                 </div>
             </div>
         </div>
+
+        <table class="table" style="width: 70%; margin-left: auto; margin-right: auto">
+            <thead>
+                <tr>
+                    <th scope="col">Truck Number</th>
+                    <th scope="col">Trailer Number</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Daily Number</th>
+                    <th scope="col">Maintenance</th>
+                    <th scope="col">View Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php
+                    while ($row = $query->fetch_assoc()) {
+
+                    ?>
+                        <td><?php echo $row['truckNo'] ?></td>
+                        <td><?php echo $row['trailerNo'] ?></td>
+                        <td><?php echo $row['location'] ?></td>
+                        <td><?php echo $row['dailyNo'] ?></td>
+                        <td><?php echo $row['maintenance'] ?></td>
+                        <td><a href="completed_form.php?id=<?= $row['id'] ?>" class="btn btn-success" style="margin: 0px; margin-bottom: 20px; margin-left: 20px">View</a></td>
+                </tr>
+            </tbody>
+        <?php
+                    }
+        ?>
+        </table>
     </body>
+
     </html>
 <?php
 } else {
