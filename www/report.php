@@ -96,7 +96,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
                 <tr>
                     <?php
                     while ($row = $query->fetch_assoc()) {
-
                     ?>
                         <td><?php echo $row['truckNo'] ?></td>
                         <td><?php echo $row['trailerNo'] ?></td>
